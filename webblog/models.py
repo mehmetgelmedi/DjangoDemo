@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 # Create your models here.
 
-class Post(models.Model):
+class Haber(models.Model):
     yazar =models.ForeignKey('auth.User')
     baslik=models.CharField(max_length=200)
     yazi=models.TextField()

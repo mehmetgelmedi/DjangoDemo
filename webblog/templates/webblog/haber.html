@@ -1,0 +1,11 @@
+{% extends "webblog/layout.html" %}
+{% block head_description %}haber,haberler en son haber{% endblock head_description %}
+{% block head_title %}Haberler{% endblock head_title %}
+{% block content%}
+{% for h in haberler %}
+    <div>
+        <p style="font-weight: bold; font-family: inherit">{{ h.baslik }}</p>
+        <p>{{ h.yazi|linebreaks }}</p>
+    </div>
+{% endfor %}
+{% endblock content %}
